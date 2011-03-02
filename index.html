@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+        "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Accessible YouTube Wrapper</title>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="swfobject.js"></script>
+<script type="text/javascript" src="jquery.a11y-youtube.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('a.video-link').a11y_youtube();
+});
+</script>
+<style type="text/css">
+.invisible { height: 0; width: 0; overflow: hidden; position: absolute;  }
+.video-controls { font-family: Arial; background: #CCC; font-size: 12px; margin: 0; }
+.video-controls li { list-style: none; float: left; margin-right: 12px; }
+.video-controls a { color: #333; text-decoration: none; }
+</style>
+</head>
+<body>
+<!-- Provide a link to a YouTube video -->
+<a href="http://www.youtube.com/watch?v=jNQXAC9IVRw" class="video-link">Me at the zoo - First YouTube Video</a>
+</body>
+</html>

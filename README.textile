@@ -1,0 +1,41 @@
+A jQuery plug-in that provides an accessible wrapper around a YouTube video using the YouTube API. 
+
+See the wiki for more information. 
+
+Note: This plug-in is based on Trevor Davis' excellent "YouTube-Chromeless":https://github.com/davist11/YouTube-Chromeless jQuery plug-in. 
+
+
+h2. Requirements
+
+* jQuery: http://jquery.com/
+* SWFObject: http://code.google.com/p/swfobject/
+* Accessible YouTube Video Plugin: http://github.com/poorgeek/a11y-youtube
+
+h2. Sample Usage
+
+<a href="http://www.youtube.com/watch?v=jNQXAC9IVRw" class="video-link">Me at the zoo - First YouTube video</a>
+
+$(document).ready(function() {
+  $('a.video-link').a11y_youtube();
+});
+
+
+h2. Options
+
+videoWidth      : '640',          // width of the embedded player
+videoHeight     : '390',          // height of the embedded player
+videoIdBase     : 'a11y-youtube', // string base to use for each video id 
+useHTTPS        : false,          // true if embedding the video on a page behind SSL
+protectPrivacy  : false,          // true to use "YouTube's privacy enhanced mode":http://www.google.com/support/youtube/bin/answer.py?answer=171780&expand=PrivacyEnhancedMode#privacy
+showPause       : true,           // false to hide the pause button
+showVideoNav    : true,           // false to hide the forward and rewind controls
+showVolume      : true,           // false to hide volume controls 
+showReplay      : false,          // true to show replay controls
+showMute        : true,           // false to hide mute controls
+
+h2. Frequently Asked Questions
+
+h3. Why do you turn on captions by default?
+
+h3. Why use the embedded player rather than the chromeless player?
+Currently the YouTube API doesn't support enabling/disabling captions in the chromeless player. You can follow this ticket on  
